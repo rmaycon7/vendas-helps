@@ -390,14 +390,14 @@
 					.get(`https://receitaws.com.br/v1/cnpj/${cnpj}`, {
 						headers: {
 							Accept: "application/json",
-							"Access-Control-Allow-Origin": "*",
+							// "Access-Control-Allow-Origin": "*",
 						},
 					})
 					.then(function (response) {
 						// console.log(response);
 						// console.log('teste');
 						// manipula o sucesso da requisição
-						makeSituacoes(response.data.uf);
+						// makeSituacoes(response.data.uf);
 						console.log(response);
 					})
 					.catch(function (error) {
