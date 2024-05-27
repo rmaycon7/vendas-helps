@@ -1,69 +1,3 @@
-const getCNPJ = () => {
-	// let cnpj = "37628401000109";
-
-	const cnpj = document.getElementById("cnpj").value;
-	console.log({ cnpj: cnpj });
-	axios.get(
-		`https://vendas-interbrasil-api.onrender.com/v1/cnpj/${cnpj}`,
-		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
-		{
-			// withCredentials: false,
-			// crossdomain: true,
-			// crossDomain: true,
-			headers: {
-				// Vary: "Origin, Access-Control-Request-Headers",
-
-				Accept: "application/json",
-				// origin: "https://developers.receitaws.com.br",
-				// "access-control-allow-origin": true,
-				// "Content-Type":
-				// 	"application/x-www-form-urlencoded; charset=UTF-8",
-				// authority: "receitaws.com.br",
-				// method
-				method: "GET",
-				// scheme: "https",
-				// "Accept-Encoding": "gzip, deflate, br, zstd",
-				// "Cache-Control": "max-age=0",
-				// "Sec-Fetch-Dest": "document",
-				// "User-Agent":
-				// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-				// "Upgrade-Insecure-Requests": 1,
-
-				// "Access-Control-Allow-Origin": "*",
-				// "Access-Control-Allow-Credentials": true,
-				// crossorigin: true,
-			},
-			// mode: "no-cors",
-			// withCredentials: false,
-			// crossdomain: true,
-		}
-	)
-		.then(function (response) {
-			console.log(
-				"teste requisição"
-			);
-			console.log(
-				response
-			);
-			// console.log('teste');
-			// manipula o sucesso da requisição
-			// makeSituacoes(response.data.uf);
-			// console.log(response);
-		})
-		.catch(function (error) {
-			// manipula erros da requisição
-			// console.error(error);
-			console.log(
-				"teste requisição erro"
-			);
-			// alert("Erro ao buscar CNPJ");
-		})
-		.finally(function () {
-			// sempre será executado
-		});
-};
-
-// let siglaufs=['AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
 const ufs = {
 	AC: [
 		"069 Não Contribuinte Externo 19%",
@@ -270,6 +204,64 @@ const ufs = {
 		"084 Revenda Externo 20%",
 	],
 };
+const getCNPJ = () => {
+	// let cnpj = "37628401000109";
+
+	const cnpj = document.getElementById("cnpj").value;
+	console.log({ cnpj: cnpj });
+	axios.get(
+		`https://vendas-interbrasil-api.onrender.com/v1/cnpj/${cnpj}`,
+		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
+		{
+			headers: {
+				// Vary: "Origin, Access-Control-Request-Headers",
+
+				Accept: "application/json",
+				method: "GET",
+
+			},
+		}
+	)
+		.then(function (response) {
+			console.log(
+				"teste requisição"
+			);
+			// console.log(
+			// 	response
+			// );
+			const {data} = response
+			let {nome, uf,cep} = data
+			// getCep(cep)
+			// getTextUpper
+			let cepInput =document.getElementById('cep')
+			cepInput.value = cep
+			makeSituacoes(uf)
+			let uppperTextIpunt = document.getElementById('textupper')
+			uppperTextIpunt.value = nome
+
+			uppperText()
+
+			// console.log('teste');
+			// manipula o sucesso da requisição
+			// makeSituacoes(response.data.uf);
+			// console.log(response);
+		})
+		.catch(function (error) {
+			// manipula erros da requisição
+			// console.error(error);
+			console.log(
+				"teste requisição erro"
+			);
+			alert("Erro, tente no")
+			// alert("Erro ao buscar CNPJ");
+		})
+		// .finally(function () {
+		// 	// sempre será executado
+		// });
+};
+
+// let siglaufs=['AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
+
 // let goias =['002 Não Contribuinte Interno','001 Contribuinte Interno','005 Consumidor Interno','007 Revenda Interno','015 Orgao Publico Federal - GO','115 Orgao Publico prefeitura - GO']
 
 const makeSituacoes = (uf) => {
@@ -296,8 +288,14 @@ const makeSituacoes = (uf) => {
 	mainlist.innerHTML = listSituacoes;
 };
 
-const getCep = () => {
-	let cep = document.getElementById("cep").value;
+const getCep = (cep) => {
+	if (!cep) {
+		cep =  document.getElementById("cep").value
+		
+	}
+	else{
+		cep = cep.replace(/[-.]/g,'')
+	}
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
 		.then(function (response) {
 			// console.log(response);
@@ -325,12 +323,17 @@ const getCep = () => {
 			// sempre será executado
 		});
 };
-let textCepFocus = () => {
+const textCepFocus = () => {
 	let cep = document.getElementById("cep");
 	cep.focus();
 };
 
-let cep = document.getElementById("cep");
+
+const textCNPJFocus = () =>{
+	let cnpj = document.getElementById('cnpj')
+	cnpj.focus()	
+}
+// let cep = document.getElementById("cep");
 // axios.get('https://viacep.com.br/ws/23895280/json/')
 //     .then(function (response) {
 //         // console.log(response);
@@ -411,3 +414,21 @@ function setObsToClipBoard() {
 }
 
 textInput.addEventListener("input", uppperText);
+
+
+const getTextUpper = () =>{
+	const textUpperInput = document.getElementById("textupper")
+	let textuppered = textUpperInput.value.toUpperCase()
+	textInput.value = textuppered
+	navigator.clipboard.writeText(textuppered)
+	// SDSDASD	
+}
+
+
+
+
+
+
+
+
+uppperText()
