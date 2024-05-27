@@ -1,91 +1,50 @@
 const getCNPJ = () => {
-	let cnpj = "37628401000109";
-	// https://receitaws.com.br/v1/cnpj/{cnpj}
+	// let cnpj = "37628401000109";
 
-	// const data = null;
+	const cnpj = document.getElementById("cnpj").value;
+	console.log({ cnpj: cnpj });
+	axios.get(
+		`https://vendas-interbrasil-api.onrender.com/v1/cnpj/${cnpj}`,
+		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
+		{
+			// withCredentials: false,
+			// crossdomain: true,
+			// crossDomain: true,
+			headers: {
+				// Vary: "Origin, Access-Control-Request-Headers",
 
-	// const xhr = new XMLHttpRequest();
-	// xhr.withCredentials = true;
+				Accept: "application/json",
+				// origin: "https://developers.receitaws.com.br",
+				// "access-control-allow-origin": true,
+				// "Content-Type":
+				// 	"application/x-www-form-urlencoded; charset=UTF-8",
+				// authority: "receitaws.com.br",
+				// method
+				method: "GET",
+				// scheme: "https",
+				// "Accept-Encoding": "gzip, deflate, br, zstd",
+				// "Cache-Control": "max-age=0",
+				// "Sec-Fetch-Dest": "document",
+				// "User-Agent":
+				// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+				// "Upgrade-Insecure-Requests": 1,
 
-	// xhr.addEventListener("readystatechange", function () {
-	// 	console.log("arroz");
-	// 	if (this.readyState === this.DONE) {
-	// 		console.log(this.responseText);
-	// 	}
-	// });
-
-	// xhr.open("GET", "https://receitaws.com.br/v1/cnpj/" + cnpj);
-	// xhr.setRequestHeader("Accept", "application/json");
-
-	// xhr.send(data);
-
-	let myHeaders = new Headers();
-
-	let myInit = {
-		method: "GET",
-		headers: {
-			Accept: "application/json",
-			"Access-Control-Allow-Origin":
-				"*",
-		},
-		mode: "cors",
-		cache: "default",
-	};
-
-	// fetch(`https://receitaws.com.br/v1/cnpj/37628401000109`, {
-	// 	method: "GET",
-	// 	headers: {
-	// 		Accept: "application/json",
-	// 		"Access-Control-Allow-Origin": "*",
-	// 	},
-	// 	mode: "cors",
-	// 	cache: "default",
-	// }).then(
-	// 	(response) => {
-	// 		console.log(response);
-	// 	},
-	// );
-	// console.log(axios);
-
-	// problema: acessar a api pelo navegador.
-	// solução: criar uma api que apenas redirecioan o conteudo da requisição. para resolver o problema do cors.
-
-	axios.get(`https://receitaws.com.br/v1/cnpj/${cnpj}`, {
-		withCredentials: false,
-		crossdomain: true,
-		crossDomain: true,
-		headers: {
-			// Vary: "Origin, Access-Control-Request-Headers",
-
-			// Accept: "application/json",
-			origin: "https://developers.receitaws.com.br",
-			"access-control-allow-origin": true,
-			// "Content-Type":
-			// 	"application/x-www-form-urlencoded; charset=UTF-8",
-			authority: "receitaws.com.br",
-			// method
-			method: "GET",
-			// scheme: "https",
-			// "Accept-Encoding": "gzip, deflate, br, zstd",
-			// "Cache-Control": "max-age=0",
-			// "Sec-Fetch-Dest": "document",
-			// "User-Agent":
-			// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-			// "Upgrade-Insecure-Requests": 1,
-
-			// "Access-Control-Allow-Origin": "*",
-			// "Access-Control-Allow-Credentials": true,
-			// crossorigin: true,
-		},
-		// mode: "no-cors",
-		// withCredentials: false,
-		// crossdomain: true,
-	})
+				// "Access-Control-Allow-Origin": "*",
+				// "Access-Control-Allow-Credentials": true,
+				// crossorigin: true,
+			},
+			// mode: "no-cors",
+			// withCredentials: false,
+			// crossdomain: true,
+		}
+	)
 		.then(function (response) {
 			console.log(
 				"teste requisição"
 			);
-			// console.log(response);
+			console.log(
+				response
+			);
 			// console.log('teste');
 			// manipula o sucesso da requisição
 			// makeSituacoes(response.data.uf);
