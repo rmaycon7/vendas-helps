@@ -98,6 +98,13 @@
 				<!-- <label class="w-100 btn btn-lg btn-primary" >Upper Case</label> -->
 				<!-- <h1 class="h3 mb-3 fw-normal">Insira o Texto</h1> -->
 				<!-- <h1 class="h3 mb-3 fw-normal">Insira o Texto</h1> -->
+				<div class="input-group mb-3" onmouseover="upperFocus()">
+					<input id="upper" type="text" class="form-control" placeholder="UPPER" aria-label="UPPER"
+						aria-describedby="basic-addon2" value="" mask="00.000.000/0000-00" />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" maxLength="14" mask="99.999.999/9999-99"
+						onclick="upper()">Upper
+					</span>
+				</div>
 				<div class="input-group mb-3">
 					<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
 						aria-describedby="basic-addon2" value="34028316501404" disabled />

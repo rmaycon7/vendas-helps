@@ -432,3 +432,17 @@ const getTextUpper = () =>{
 
 
 uppperText()
+const upperInput = document.getElementById('upper')
+
+const upperFocus = () =>{
+	upperInput.focus()
+}
+upperInput.addEventListener('input', () =>{
+	upperInput.value = upperInput.value.toUpperCase()
+	// console.log(upperInput.value);
+	navigator.clipboard.writeText(upperInput.value)
+})
+const upper = ()=>{
+	upperInput.value = upperInput.value.toUpperCase()
+		navigator.clipboard.writeText(upperInput.value)
+	}
