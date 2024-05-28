@@ -28,20 +28,22 @@ const axios = require('axios')
 const Fuse = require('fuse.js')
 
 // axios.get('https://api.cnpjs.dev/v1/00394684000153').then((response) =>{
-//   let {data} = response
-//   let {endereco, natureza_juridica,razao_social} = data
-//   let {uf} = endereco
-//   console.log({uf,natureza_juridica, razao_social});
-// })
+  axios.get('https://api.cnpjs.dev/v1/37628401000109').then((response) =>{
+  let {data} = response
+  let {endereco, natureza_juridica,razao_social} = data
+  let {uf} = endereco
+  console.log({uf,natureza_juridica, razao_social});
+})
 
 let list= ["Old Man's War", "The Lock Artist",'Municipio']
 const options = {
-  includeScore: true
+  includeScore: true,
+  minMatchCharLength: 3
 }
 
-const fuse = new Fuse(list)
+const fuse = new Fuse(list,options)
 
-const result = fuse.search('cipio')
+const result = fuse.search('ti')
 console.log(result);
 
 // const reg = /\d{3}/g;
