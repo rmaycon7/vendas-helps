@@ -4,6 +4,9 @@ console.log(teste);
 let help ;
 
 
+
+
+
 const { exec } = require('node:child_process');
 exec('clear')
 const tetra = (a)=>{

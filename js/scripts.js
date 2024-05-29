@@ -1,3 +1,26 @@
+fetch("./_header.html")
+	.then((response) => {
+		return response.text();
+	})
+	.then((data) => {
+		document.querySelector(
+			"header"
+		).innerHTML = data;
+	});
+
+try {
+	fetch("./footer.html")
+		.then((response) => {
+			return response.text();
+		})
+		.then((data) => {
+			document.querySelector(
+				"footer"
+			).innerHTML =
+				data;
+		});
+} catch (error) {}
+
 const ufs = {
 	AC: [
 		"069 Não Contribuinte Externo 19%",
@@ -218,7 +241,6 @@ const getCNPJ = () => {
 
 				Accept: "application/json",
 				method: "GET",
-
 			},
 		}
 	)
@@ -229,17 +251,35 @@ const getCNPJ = () => {
 			// console.log(
 			// 	response
 			// );
-			const {data} = response
-			let {nome, uf,cep} = data
+			const {
+				data,
+			} =
+				response;
+			let {
+				nome,
+				uf,
+				cep,
+			} =
+				data;
 			// getCep(cep)
 			// getTextUpper
-			let cepInput =document.getElementById('cep')
-			cepInput.value = cep
-			makeSituacoes(uf)
-			let uppperTextIpunt = document.getElementById('textupper')
-			uppperTextIpunt.value = nome
+			let cepInput =
+				document.getElementById(
+					"cep"
+				);
+			cepInput.value =
+				cep;
+			makeSituacoes(
+				uf
+			);
+			let uppperTextIpunt =
+				document.getElementById(
+					"textupper"
+				);
+			uppperTextIpunt.value =
+				nome;
 
-			uppperText()
+			uppperText();
 
 			// console.log('teste');
 			// manipula o sucesso da requisição
@@ -252,12 +292,14 @@ const getCNPJ = () => {
 			console.log(
 				"teste requisição erro"
 			);
-			alert("Erro, tente no")
+			alert(
+				"Erro, tente no"
+			);
 			// alert("Erro ao buscar CNPJ");
-		})
-		// .finally(function () {
-		// 	// sempre será executado
-		// });
+		});
+	// .finally(function () {
+	// 	// sempre será executado
+	// });
 };
 
 // let siglaufs=['AC','AL','AM','AP','BA','CE','DF','ES','GO','MA','MG','MS','MT','PA','PB','PE','PI','PR','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
@@ -290,11 +332,12 @@ const makeSituacoes = (uf) => {
 
 const getCep = (cep) => {
 	if (!cep) {
-		cep =  document.getElementById("cep").value
-		
-	}
-	else{
-		cep = cep.replace(/[-.]/g,'')
+		cep =
+			document.getElementById(
+				"cep"
+			).value;
+	} else {
+		cep = cep.replace(/[-.]/g, "");
 	}
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
 		.then(function (response) {
@@ -328,11 +371,10 @@ const textCepFocus = () => {
 	cep.focus();
 };
 
-
-const textCNPJFocus = () =>{
-	let cnpj = document.getElementById('cnpj')
-	cnpj.focus()	
-}
+const textCNPJFocus = () => {
+	let cnpj = document.getElementById("cnpj");
+	cnpj.focus();
+};
 // let cep = document.getElementById("cep");
 // axios.get('https://viacep.com.br/ws/23895280/json/')
 //     .then(function (response) {
@@ -349,11 +391,6 @@ const textCNPJFocus = () =>{
 //         // sempre será executado
 
 //     });
-
-let teste = {
-	nome: "jose",
-	marcas: [],
-};
 
 //   https://apigateway.conectagov.estaleiro.serpro.gov.br/api-cnpj-basica/v2/basica/
 
@@ -372,8 +409,8 @@ let clearTextUpper = () => {
 	textUpper.focus();
 };
 
-let textInput = document.getElementById("textupper");
-textInput.focus();
+// let textInput = document.getElementById("textupper");
+// textInput.focus();
 // window.setInterval(() => {
 //     textInput.focus()
 // }, 5000);
@@ -413,36 +450,80 @@ function setObsToClipBoard() {
 	navigator.clipboard.writeText(osbcardText);
 }
 
-textInput.addEventListener("input", uppperText);
+try {
+	textInput.addEventListener("input", uppperText);
+} catch (error) {}
 
+const getTextUpper = () => {
+	const textUpperInput =
+		document.getElementById(
+			"textupper"
+		);
+	let textuppered = textUpperInput.value.toUpperCase();
+	textInput.value = textuppered;
+	navigator.clipboard.writeText(textuppered);
+	// SDSDASD
+};
 
-const getTextUpper = () =>{
-	const textUpperInput = document.getElementById("textupper")
-	let textuppered = textUpperInput.value.toUpperCase()
-	textInput.value = textuppered
-	navigator.clipboard.writeText(textuppered)
-	// SDSDASD	
-}
+// uppperText();
+const upperInput = document.getElementById("upper");
 
+const upperFocus = () => {
+	upperInput.focus();
+};
+try {
+	upperInput.addEventListener("input", () => {
+		upperInput.value =
+			upperInput.value.toUpperCase();
+		// console.log(upperInput.value);
+		navigator.clipboard.writeText(
+			upperInput.value
+		);
+	});
+} catch (error) {}
+const upper = () => {
+	upperInput.value = upperInput.value.toUpperCase();
+	navigator.clipboard.writeText(upperInput.value);
+};
 
+const priceFocus = () => {
+	const priceInput = document.getElementById("price");
+	priceInput.focus();
+};
 
+const mlbFrame = document.getElementById("mlb-frame");
 
+try {
+	const priceInput = document.getElementById("price");
 
+	priceInput.addEventListener("input", () => {
+		const mlb = priceInput.value;
+		const url = `https://www.mercadolivre.com.br/simulador-de-custos?itemId=${mlb}`;
+		mlbFrame.src = url;
+	});
+} catch (error) {}
 
+const price = () => {
+	const priceInput = document.getElementById("price");
+	const mlbFrame = document.getElementById("mlb-frame");
+	const mlb = priceInput.value;
+	console.log(mlbFrame.src);
+	const url = `https://www.mercadolivre.com.br/simulador-de-custos?itemId=${mlb}`;
+	mlbFrame.src = url;
+};
 
+const priceInput = document.getElementById("price");
+// Execute a function when the user presses a key on the keyboard
+priceInput.addEventListener("keypress", function (event) {
+	// If the user presses the "Enter" key on the keyboard
+	if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault();
+		price();
 
-uppperText()
-const upperInput = document.getElementById('upper')
-
-const upperFocus = () =>{
-	upperInput.focus()
-}
-upperInput.addEventListener('input', () =>{
-	upperInput.value = upperInput.value.toUpperCase()
-	// console.log(upperInput.value);
-	navigator.clipboard.writeText(upperInput.value)
-})
-const upper = ()=>{
-	upperInput.value = upperInput.value.toUpperCase()
-		navigator.clipboard.writeText(upperInput.value)
+		// Trigger the button element with a click
+		// document.getElementById(
+		// 	"myBtn"
+		// ).click();
 	}
+});

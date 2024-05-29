@@ -3,6 +3,7 @@
     "axios": "^1.7.2",
     "express": "^4.19.2",
     "fuse.js": "^7.0.0",
-    "http-proxy-middleware": "^3.0.0"
+    "http-proxy-middleware": "^3.0.0",
+    "http-server": "^14.1.1"
   }
 }
