@@ -565,7 +565,7 @@ const cleanInput = document.getElementById("cleanInput");
 
 const clean = () => {
 	const cleanTextContent = cleanInput.value.replace(
-		/[.-]/g,
+		/[\.\-\/\\^~\-\+\-\*]/g,
 		""
 	);
 	navigator.clipboard.writeText(cleanTextContent);
