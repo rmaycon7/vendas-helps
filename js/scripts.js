@@ -11,13 +11,31 @@ fetch("./_header.html")
 try {
 	fetch("./footer.html")
 		.then((response) => {
+			if (
+				response.status !=
+				200
+			) {
+				throw new TypeError(
+					"footer not found"
+				);
+			}
+			// console.log(response.status);
 			return response.text();
 		})
 		.then((data) => {
-			document.querySelector(
-				"footer"
-			).innerHTML =
-				data;
+			console.log(
+				{
+					data,
+				}
+			);
+			if (
+				data
+			) {
+				document.querySelector(
+					"footer"
+				).innerHTML =
+					data;
+			}
 		});
 } catch (error) {}
 
@@ -489,6 +507,13 @@ const upper = () => {
 const priceFocus = () => {
 	const priceInput = document.getElementById("price");
 	priceInput.focus();
+	const clipboardText = navigator.clipboard
+		.readText()
+		.then((text) => {
+			priceInput.value =
+				text;
+			price();
+		});
 };
 
 const mlbFrame = document.getElementById("mlb-frame");
@@ -514,16 +539,43 @@ const price = () => {
 
 const priceInput = document.getElementById("price");
 // Execute a function when the user presses a key on the keyboard
-priceInput.addEventListener("keypress", function (event) {
-	// If the user presses the "Enter" key on the keyboard
-	if (event.key === "Enter") {
-		// Cancel the default action, if needed
-		event.preventDefault();
-		price();
+if (priceInput) {
+	priceInput.addEventListener(
+		"keypress",
+		function (event) {
+			// If the user presses the "Enter" key on the keyboard
+			if (
+				event.key ===
+				"Enter"
+			) {
+				// Cancel the default action, if needed
+				event.preventDefault();
+				price();
 
-		// Trigger the button element with a click
-		// document.getElementById(
-		// 	"myBtn"
-		// ).click();
-	}
-});
+				// Trigger the button element with a click
+				// document.getElementById(
+				// 	"myBtn"
+				// ).click();
+			}
+		}
+	);
+}
+
+const cleanInput = document.getElementById("cleanInput");
+
+const clean = () => {
+	const cleanTextContent = cleanInput.value.replace(
+		/[.-]/g,
+		""
+	);
+	navigator.clipboard.writeText(cleanTextContent);
+	cleanInput.value = cleanTextContent;
+};
+
+const cleanFocus = () => {
+	// console.log("aqui");
+	try {
+		cleanInput.focus();
+		// console.log({ cleanInput });
+	} catch (error) {}
+};
