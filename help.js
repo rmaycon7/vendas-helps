@@ -53,3 +53,7 @@ console.log(removeAccents('Antoine Japão'));
 // const str = "Java323Scr995ip4894545t";
 // const newStr = str.replace(reg, "");
 // console.log(newStr);
+const word = "freecodecamp";
+
+const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+  

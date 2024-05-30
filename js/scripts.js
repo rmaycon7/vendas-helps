@@ -526,9 +526,14 @@ const priceFocus = () => {
 	const clipboardText = navigator.clipboard
 		.readText()
 		.then((text) => {
-			priceInput.value =
-				text;
-			price();
+			if (
+				priceInput.value !=
+				text
+			) {
+				priceInput.value =
+					text;
+				price();
+			}
 		});
 };
 
