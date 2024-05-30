@@ -309,7 +309,7 @@ const getCNPJ = () => {
 					"textupper"
 				);
 			uppperTextIpunt.value =
-				nome;
+				razao_social;
 
 			uppperText();
 
@@ -320,7 +320,9 @@ const getCNPJ = () => {
 		})
 		.catch(function (error) {
 			// manipula erros da requisição
-			// console.error(error);
+			console.error(
+				error
+			);
 			console.log(
 				"teste requisição erro"
 			);
