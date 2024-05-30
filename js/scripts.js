@@ -443,7 +443,7 @@ let clearTextUpper = () => {
 	textUpper.focus();
 };
 
-// let textInput = document.getElementById("textupper");
+let textInput = document.getElementById("textupper");
 // textInput.focus();
 // window.setInterval(() => {
 //     textInput.focus()
