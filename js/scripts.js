@@ -251,7 +251,7 @@ const getCNPJ = () => {
 	const cnpj = document.getElementById("cnpj").value;
 	console.log({ cnpj: cnpj });
 	axios.get(
-		`https://vendas-interbrasil-api.onrender.com/v1/cnpj/${cnpj}`,
+		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
 		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
 		{
 			headers: {
@@ -269,16 +269,30 @@ const getCNPJ = () => {
 			// console.log(
 			// 	response
 			// );
-			const {
+
+			let {
 				data,
 			} =
 				response;
 			let {
-				nome,
+				endereco,
+				natureza_juridica,
+				razao_social,
+			} =
+				data;
+			let {
 				uf,
 				cep,
 			} =
-				data;
+				endereco;
+			console.log(
+				{
+					uf,
+					natureza_juridica,
+					razao_social,
+				}
+			);
+
 			// getCep(cep)
 			// getTextUpper
 			let cepInput =
