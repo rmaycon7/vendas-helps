@@ -373,6 +373,7 @@ const getCep = (cep) => {
 	} else {
 		cep = cep.replace(/[-.]/g, "");
 	}
+	navigator.clipboard.writeText(cep);
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
 		.then(function (response) {
 			// console.log(response);
