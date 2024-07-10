@@ -1,5 +1,5 @@
 let
-    Fonte = Xml.Tables(File.Contents("D:\vendas11\Desktop\MAYCON\vendas-helps\vba\clientes-ph.xml")),
+    Fonte = Xml.Tables(File.Contents("D:\vendas11\Desktop\MAYCON\vendas-helps\vba\clientes-maycon.xml")),
     #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Attribute:Version", Int64.Type}}),
     #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"METADATA", "Attribute:Version"}),
     #"ROWDATA Expandido" = Table.ExpandTableColumn(#"Colunas Removidas", "ROWDATA", {"ROW"}, {"ROWDATA.ROW"}),
@@ -9,9 +9,10 @@ let
     #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",null,"(00) 00000-0000",Replacer.ReplaceValue,{"FONE"}),
     #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Valor Substituído1", {{"ULTIMACOMPRA", type date}}, "pt-BR"),
     #"Valor Substituído2" = Table.ReplaceValue(#"Tipo Alterado com Localidade",null,#date(1990, 1, 1),Replacer.ReplaceValue,{"ULTIMACOMPRA"}),
-    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído2",{{"CGC", type text}})
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído2",{{"CGC", type text}}),
+    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado1",{{"ULTIMACOMPRA", Order.Ascending}})
 in
-    #"Tipo Alterado1"
+    #"Linhas Classificadas"
 
 
 
