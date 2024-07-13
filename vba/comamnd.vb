@@ -93,3 +93,95 @@ Sub Macro1()
         .Refresh BackgroundQuery:=False
     End With
 End Sub
+
+
+
+
+
+' 
+
+Sub Macro5()
+    '
+    ' Macro5 Macro
+    '
+
+    '
+    Application.CutCopyMode = False
+    Application.CutCopyMode = False
+    ActiveWorkbook.Queries.Add Name:="minhas-vendas", Formula:= _
+    "Let" & Chr(13) & "" & Chr(10) & "    Fonte = Xml.Tables(File.Contents(""D:\vendas11\Desktop\MAYCON\vendas-helps\vba\vendas-maycon.xml""))," & Chr(13) & "" & Chr(10) & "    #""Tipo Alterado"" = Table.TransformColumnTypes(Fonte,{{""Attribute:Version"", Int64.Type}})," & Chr(13) & "" & Chr(10) & "    #""Colunas Removidas"" = Table.RemoveColumns(#""Tipo Alterado"",{""METADATA"", ""Attribute:Version""})," & Chr(13) & "" & Chr(10) & "    #""ROWDATA Expandido"" = Table.ExpandTableCo" & _
+    "lumn(#""Colunas Removidas"", ""ROWDATA"", {""ROW""}, {""ROWDATA.ROW""})," & Chr(13) & "" & Chr(10) & "    #""ROWDATA.ROW Expandido"" = Table.ExpandTableColumn(#""ROWDATA Expandido"", ""ROWDATA.ROW"", {""Attribute:SITUACAO"", ""Attribute:RAZAOSOCIAL"", ""Attribute:CIDADE"", ""Attribute:UF"", ""Attribute:VENDEDOR"", ""Attribute:EXTERNO"", ""Attribute:CGC"", ""Attribute:CODORCAMENTO"", ""Attribut" & _
+    "e:DATA"", ""Attribute:NF"", ""Attribute:VENDEDOR_VENDA"", ""Attribute:TOTAL""}, {""ROWDATA.ROW.Attribute:SITUACAO"", ""ROWDATA.ROW.Attribute:RAZAOSOCIAL"", ""ROWDATA.ROW.Attribute:CIDADE"", ""ROWDATA.ROW.Attribute:UF"", ""ROWDATA.ROW.Attribute:VENDEDOR"", ""ROWDATA.ROW.Attribute:EXTERNO"", ""ROWDATA.ROW.Attribute:CGC"", ""ROWDATA.ROW.Attribute:CODORCAMENTO"", ""ROWD" & _
+    "ATA.ROW.Attribute:DATA"", ""ROWDATA.ROW.Attribute:NF"", ""ROWDATA.ROW.Attribute:VENDEDOR_VENDA"", ""ROWDATA.ROW.Attribute:TOTAL""})," & Chr(13) & "" & Chr(10) & "    #""Colunas Renomeadas"" = Table.RenameColumns(#""ROWDATA.ROW Expandido"",{{""ROWDATA.ROW.Attribute:SITUACAO"", ""SITUACAO""}, {""ROWDATA.ROW.Attribute:RAZAOSOCIAL"", ""RAZAOSOCIAL""}, {""ROWDATA.ROW.Attribute:CIDADE"", ""CIDADE""}" & _
+    ", {""ROWDATA.ROW.Attribute:UF"", ""UF""}, {""ROWDATA.ROW.Attribute:VENDEDOR"", ""VENDEDOR""}, {""ROWDATA.ROW.Attribute:EXTERNO"", ""EXTERNO""}, {""ROWDATA.ROW.Attribute:CGC"", ""CGC""}, {""ROWDATA.ROW.Attribute:CODORCAMENTO"", ""CODORCAMENTO""}, {""ROWDATA.ROW.Attribute:NF"", ""NF""}})," & Chr(13) & "" & Chr(10) & "    #""Colunas Removidas1"" = Table.RemoveColumns(#""Colunas Renomeadas"",{""RO" & _
+    "WDATA.ROW.Attribute:VENDEDOR_VENDA""})," & Chr(13) & "" & Chr(10) & "    #""Colunas Renomeadas1"" = Table.RenameColumns(#""Colunas Removidas1"",{{""ROWDATA.ROW.Attribute:TOTAL"", ""TOTAL""}})," & Chr(13) & "" & Chr(10) & "    #""Valor SubstituíDo"" = Table.ReplaceValue(#""Colunas Renomeadas1"",""."","","",Replacer.ReplaceText,{""TOTAL""})," & Chr(13) & "" & Chr(10) & "    #""Tipo Alterado com Localidade"" = Table.TransformColumnTypes(#""Valor Subst" & _
+    "ituíDo"", {{""TOTAL"", Currency.Type}}, ""pt-BR"")," & Chr(13) & "" & Chr(10) & "    #""Colunas Renomeadas2"" = Table.RenameColumns(#""Tipo Alterado com Localidade"",{{""ROWDATA.ROW.Attribute:DATA"", ""DATA""}})," & Chr(13) & "" & Chr(10) & "    #""Texto ExtraíDo Antes Do Delimitador"" = Table.TransformColumns(#""Colunas Renomeadas2"", {{""DATA"", each Text.BeforeDelimiter(_, ""T""), type text}})," & Chr(13) & "" & Chr(10) & "    #""Tipo Alterado c" & _
+    "om Localidade1"" = Table.TransformColumnTypes(#""Texto ExtraíDo Antes Do Delimitador"", {{""DATA"", type date}}, ""pt-BR"")," & Chr(13) & "" & Chr(10) & "    #""Linhas Classificadas"" = Table.Sort(#""Tipo Alterado com Localidade1"",{{""DATA"", Order.Descending}})" & Chr(13) & "" & Chr(10) & "in" & Chr(13) & "" & Chr(10) & "    #""Linhas Classificadas"""
+    Workbooks("VENDAS-CPL.xlsm").Connections.Add2 "Consulta - minhas-vendas", _
+    "Conexão com a consulta 'minhas-vendas' na pasta de trabalho.", _
+    "OLEDB;Provider=Microsoft.Mashup.OleDb.1;Data Source=$Workbook$;Location=minhas-vendas;Extended Properties=" _
+    , """minhas-vendas""", 6, True, False
+    With ActiveSheet.ListObjects.Add(SourceType:=4, Source:=ActiveWorkbook. _
+        Connections("Consulta - minhas-vendas"), Destination:=Range("$A$1")). _
+        TableObject
+        .RowNumbers = False
+        .PreserveFormatting = True
+        .RefreshStyle = 1
+        .AdjustColumnWidth = True
+        .ListObject.DisplayName = "minhas_vendas"
+        .Refresh
+    End With
+    ActiveSheet.ListObjects("minhas_vendas").TableStyle = "TableStyleMedium9"
+    ActiveSheet.ListObjects("minhas_vendas").TableStyle = "TableStyleMedium9"
+    With Selection.Font
+        .Name = "Calibri"
+        .Size = 14
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontMinor
+    End With
+    Rows("1:1").Select
+    With Selection.Font
+        .Name = "Calibri"
+        .Size = 16
+        .Strikethrough = False
+        .Superscript = False
+        .Subscript = False
+        .OutlineFont = False
+        .Shadow = False
+        .Underline = xlUnderlineStyleNone
+        .ThemeColor = xlThemeColorLight1
+        .TintAndShade = 0
+        .ThemeFont = xlThemeFontMinor
+    End With
+    Selection.Font.Bold = True
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Columns("K:K").EntireColumn.AutoFit
+    Columns("J:J").EntireColumn.AutoFit
+    Columns("I:I").EntireColumn.AutoFit
+    Columns("G:G").EntireColumn.AutoFit
+    Columns("F:F").EntireColumn.AutoFit
+    Columns("E:E").EntireColumn.AutoFit
+    Columns("C:C").EntireColumn.AutoFit
+    Columns("B:B").EntireColumn.AutoFit
+    ActiveWindow.Zoom = 85
+    Range("H32").Select
+    ActiveWindow.SmallScroll Down:=-27
+End Sub
+
