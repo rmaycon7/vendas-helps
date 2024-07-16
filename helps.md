@@ -1,30 +1,5 @@
 # *PRODUTOS INDISPONIVEIS*
 1. 21734	afogador completo yamaha 25
-2. 18388	ajuste fricção acelerador yamaha 25 
-3. 15950	alavanca afogador yamaha 40 hp
-4. 15954	alavanca capo yamaha 40 hp
-5. 15974	alavanca inclinação arabeta yamaha 15 hp
-6. 19371	anel oring cuba carburador yamaha 40
-7. 18667	anel oring vedação carburador yamaha 25 hp
-8. 16168	bloco yamaha 15 fmhs
-9. 16116	borracha tampa partida yamaha 40
-10. 18319	botão afogador yamaha 25
-11. 17876	botão afogador yamaha 4
-12. 18381	bucha manche yamaha 25 b
-13. 18425	bucha parafuso central superior cavalete yamaha 25
-14. 16111	cabeçote yamaha 40
-15. 16173	cabo acelerador yamaha 15
-16. 22810	caburador yamaha 15 FMHS
-17. 14739 	carburador yamaha 15 FMHS (TAMBEM - FORNECEDORES DIFERENTES)
-18. 14743	carburador yamaha 40 OEM 40A-74301-00
-19. 22150	correia dentada yamaha 20
-20. 16040	eixo mudança transmissão s yamaha 40
-21. 19611	gicle baixa mercury 5
-22. 15937	haste afogador yamaha 15
-23. 19595	junta cabecote mercury 5
-24. 15053	cdi yamaha 4 hp
-25. 16955	mola partida yamaha 25
-26. 
 
 
 
@@ -33,6 +8,28 @@
 1. ARG4T-VALVULA ADMISSAO 2,8 HP
 2. ARG4T-VALVULA ESCAPE...2,8 HP
 3. RÇ-PARAFUSO EMBREAGEM ROÇAD. S430 ( KIT ) "ARGON"
+
+
+
+*Tabela de Lima - Corrente*
+- 4,0mm (3/8" 1,1 - 1,3)
+- 4,8mm (3/8" 1,3) (325" 1,3 - 1,5)
+- 5,2mm (3/8" 1,5 - 1,6)
+- 5,5mm (3/8" 1,5 - 1,6)
+
+
+
+
+*COTAÇÃO - FRETE - EMtram*
+
+- CIDADE: Peixoto de Azevedo - MT
+- VALOR DA MERCADORIA: R$ 7.000,00
+- VOLUMES: 06
+- PESO: 132 Kg
+- DIMENSÕES: 180x120x5 cm
+- CEP: 78530000
+
+
 
 
 # *SEM CORRESPONDÊNCIA*
@@ -55,6 +52,26 @@
 13. BGS-DEFLETOR DO ESCAPAMENTO....393756 - *R$ 55,00*
 14. O&P-FACA 406712 - *R$ 68,00*
 15. BGS-PARAFUSO 690345 - *R$ 7,00*
+
+
+
+*Blisters - Rossel - Amarelo*
+
+- 15mts 1,8mm redondo - *R$ 3,30*
+- 15mts 3,0mm quadrado - *R$ 7,60*
+- 30mts 3,0mm quadrado - *R$ 17,90*
+- 50mts 3,0mm quadrado - *R$ 26,00*
+- 15mts 3,0mm redondo - *R$ 7,60*
+- 30mts 3,0mm redondo - *R$ 17,90*
+- 50mts 3,0mm redondo - *R$ 26,00*
+
+
+
+
+
+
+
+
 
 202681260000159
 *DAEs ENVIADOS*
