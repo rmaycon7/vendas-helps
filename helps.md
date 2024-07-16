@@ -20,7 +20,7 @@
 
 
 
-*COTAÇÃO - FRETE - EMtram*
+*COTAÇÃO - FRETE - EMTRAM*
 
 - CIDADE: Peixoto de Azevedo - MT
 - VALOR DA MERCADORIA: R$ 7.000,00
