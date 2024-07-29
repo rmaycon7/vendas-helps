@@ -1,3 +1,61 @@
+
+let
+    Fonte = Xml.Tables(File.Contents("D:\ml01\Desktop\Dev\vendas-helps\vba\vendas-ph.xml")),
+    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Attribute:Version", Int64.Type}}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"METADATA", "Attribute:Version"}),
+    #"ROWDATA Expandido" = Table.ExpandTableColumn(#"Colunas Removidas", "ROWDATA", {"ROW"}, {"ROWDATA.ROW"}),
+    #"ROWDATA.ROW Expandido" = Table.ExpandTableColumn(#"ROWDATA Expandido", "ROWDATA.ROW", {"Attribute:SITUACAO", "Attribute:RAZAOSOCIAL", "Attribute:CIDADE", "Attribute:UF", "Attribute:VENDEDOR", "Attribute:EXTERNO", "Attribute:CGC", "Attribute:CODORCAMENTO", "Attribute:DATA", "Attribute:NF", "Attribute:VENDEDOR_VENDA", "Attribute:TOTAL"}, {"ROWDATA.ROW.Attribute:SITUACAO", "ROWDATA.ROW.Attribute:RAZAOSOCIAL", "ROWDATA.ROW.Attribute:CIDADE", "ROWDATA.ROW.Attribute:UF", "ROWDATA.ROW.Attribute:VENDEDOR", "ROWDATA.ROW.Attribute:EXTERNO", "ROWDATA.ROW.Attribute:CGC", "ROWDATA.ROW.Attribute:CODORCAMENTO", "ROWDATA.ROW.Attribute:DATA", "ROWDATA.ROW.Attribute:NF", "ROWDATA.ROW.Attribute:VENDEDOR_VENDA", "ROWDATA.ROW.Attribute:TOTAL"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"ROWDATA.ROW Expandido",{{"ROWDATA.ROW.Attribute:SITUACAO", "SITUACAO"}, {"ROWDATA.ROW.Attribute:RAZAOSOCIAL", "RAZAOSOCIAL"}, {"ROWDATA.ROW.Attribute:CIDADE", "CIDADE"}, {"ROWDATA.ROW.Attribute:UF", "UF"}, {"ROWDATA.ROW.Attribute:VENDEDOR", "VENDEDOR"}, {"ROWDATA.ROW.Attribute:EXTERNO", "EXTERNO"}, {"ROWDATA.ROW.Attribute:CGC", "CGC"}}),
+    #"Texto Extraído Antes do Delimitador" = Table.TransformColumns(#"Colunas Renomeadas", {{"ROWDATA.ROW.Attribute:DATA", each Text.BeforeDelimiter(_, "T"), type text}}),
+    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Texto Extraído Antes do Delimitador", {{"ROWDATA.ROW.Attribute:DATA", type date}}, "pt-BR"),
+    #"Colunas Renomeadas1" = Table.RenameColumns(#"Tipo Alterado com Localidade",{{"ROWDATA.ROW.Attribute:CODORCAMENTO", "CODORCAMENTO"}, {"ROWDATA.ROW.Attribute:DATA", "DATA"}, {"ROWDATA.ROW.Attribute:NF", "NF"}, {"ROWDATA.ROW.Attribute:VENDEDOR_VENDA", "VENDEDOR_VENDA"}, {"ROWDATA.ROW.Attribute:TOTAL", "TOTAL"}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Colunas Renomeadas1",".",",",Replacer.ReplaceText,{"TOTAL"}),
+    #"Tipo Alterado com Localidade1" = Table.TransformColumnTypes(#"Valor Substituído", {{"TOTAL", Currency.Type}}, "pt-BR"),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade1",{{"NF", type text}, {"CODORCAMENTO", type text}, {"CGC", type text}}),
+    #"Linhas Agrupadas" = Table.Group(#"Tipo Alterado1", {"CGC", "RAZAOSOCIAL"}, {{"Contagem", each Table.RowCount(_), Int64.Type}, {"soma", each List.Sum([TOTAL]), type nullable number}})
+in
+    #"Linhas Agrupadas"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Let
 Fonte = Xml.Tables(File.Contents("D:\vendas11\Desktop\MAYCON\vendas-helps\vba\clientes-maycon.xml")),
 #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Attribute:Version", Int64.Type}}),
