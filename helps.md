@@ -24,10 +24,21 @@ Bateria -22996 - R$ 316,00
 // FRETE R$ 70,10  REF. TABELA INTERBRASIL //
 
 # *PRODUTOS INDISPONIVEIS*
-1. 200 Arruela 1/8  aba larga 
-2. 200  arruela 5/16 aba larga 
-3. 10 chave allen com cabo 4 mm 
-4. 
+1. FACA PEIXEIRA AÇO CARBONO 9" "COLIMA"
+
+
+
+
+COTAÇÃO - FRETE 
+
+- CIDADE: Alta Floresta - MT
+- VALOR DA MERCADORIA: R$ 2.300,00
+- VOLUMES: 01
+- PESO: 44 Kg
+- DIMENSÕES: 180x120x5 cm
+- CEP: 78580000
+
+
 
 # *sem correspondencia*
 1. 1737836
