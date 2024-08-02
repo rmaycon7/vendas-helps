@@ -459,11 +459,12 @@ function uppperText() {
 	let dataTotal = new Date();
 	// console.log(dataTotal.toLocaleDateString())
 	let obsCadastroText = `
-CLIENTE VENDAS ECOMMERCE, MERCADO LIVRE, VENDA NO CARTÃO 1X </br>
+// CLIENTE VENDAS ECOMMERCE, MERCADO LIVRE // </br>
 
-\\\\\\ CONSULTADO SERASA DIA ${dataTotal.toLocaleDateString()}, NADA CONSTA, DATA DE NASCIMENTO: ..., SITUAÇÃO DO CPF: REGULAR CADASTRAL em ${dataTotal.toLocaleDateString()} ///</br>
+// CONSULTADO CPF/CNPJ: NO PORTAL DA TRANSPARÊNCIA GOV. FEDERAL / RECEITA FEDERAL - EMISSÃO DE COMPROVANTE DE INSCR. CNPJ //<br>
+// NO DIA ${dataTotal.toLocaleDateString()},  SITUAÇÃO DO CPF/CNPJ: REGULAR CADASTRAL EM ${dataTotal.toLocaleDateString()} //</br>
 
-\\\\\\ COMPRA FEITA PELO SR: ${textUppered}, E QUEM RETIRA MERCADORIA ///</br>
+// COMPRA FEITA PELO SR: ${textUppered}, E QUEM RETIRA MERCADORIA //</br>
 `;
 	let obsCadastro =
 		document.getElementById(
