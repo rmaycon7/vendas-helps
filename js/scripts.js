@@ -248,8 +248,11 @@ const ufs = {
 const getCNPJ = () => {
 	// let cnpj = "37628401000109";
 
-	const cnpj = document.getElementById("cnpj").value;
-	console.log({ cnpj: cnpj });
+	const cnpj = clean(
+		document.getElementById("cnpj")
+			.value
+	);
+	// console.log({ cnpj: cnpj });
 	axios.get(
 		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
 		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
@@ -373,6 +376,7 @@ const getCep = (cep) => {
 	} else {
 		cep = cep.replace(/[-.]/g, "");
 	}
+	cep = clean(cep);
 	navigator.clipboard.writeText(cep);
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
 		.then(function (response) {
