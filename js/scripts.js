@@ -254,7 +254,7 @@ const getCNPJ = () => {
 			/[\.\-\/\\^~\-\+\-\* ]/g,
 			""
 		);
-	// console.log({ cnpj: cnpj });
+	console.log({ cnpj: cnpj });
 	axios.get(
 		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
 		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
@@ -371,14 +371,20 @@ const makeSituacoes = (uf) => {
 
 const getCep = (cep) => {
 	if (!cep) {
-		cep =
-			document.getElementById(
+		cep = document
+			.getElementById(
 				"cep"
-			).value;
+			)
+			.value.replace(
+				/[\.\-\/\\^~\-\+\-\* ]/g,
+				""
+			);
 	} else {
-		cep = cep.replace(/[-.]/g, "");
+		cep = cep.replace(
+			/[\.\-\/\\^~\-\+\-\* ]/g,
+			""
+		);
 	}
-	cep = clean(cep);
 	navigator.clipboard.writeText(cep);
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
 		.then(function (response) {
