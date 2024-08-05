@@ -248,10 +248,12 @@ const ufs = {
 const getCNPJ = () => {
 	// let cnpj = "37628401000109";
 
-	const cnpj = clean(
-		document.getElementById("cnpj")
-			.value
-	);
+	const cnpj = document
+		.getElementById("cnpj")
+		.value.replace(
+			/[\.\-\/\\^~\-\+\-\* ]/g,
+			""
+		);
 	// console.log({ cnpj: cnpj });
 	axios.get(
 		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
