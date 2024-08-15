@@ -67,7 +67,7 @@
 		<textarea class="form-control" aria-label="With textarea"></textarea>
 	</div> -->
 
-
+		
 
 		<main class="container">
 			<section class="form-signin">
@@ -76,7 +76,7 @@
 					2024
 				</p>
 
-				<div>
+				<div id="cleanTextDiv">
 					<img class="mb-3" src="./img/Logo%20Interbrasil.svg" alt="" width="272" height="83" />
 					<!-- <label class="w-100 btn btn-lg btn-primary" >Upper Case</label> -->
 					<!-- <h1 class="h3 mb-3 fw-normal">Insira o Texto</h1> -->
@@ -124,6 +124,22 @@
 
 
 		<script></script>
+<script>
+	let clear_input = document.getElementById("cleanInput");
+
+	// Execute a function when the user presses a key on the keyboard
+	clear_input.addEventListener("keypress", function (event) {
+		// If the user presses the "Enter" key on the keyboard
+		if (event.key === "Enter") {
+			// Cancel the default action, if needed
+			event.preventDefault();
+			// Trigger the button element with a click
+			cleanFocus()
+			clean()
+		}
+	});
+</script>
+
 		<script type="text/javascript"></script>
 
 		<!-- <script>
