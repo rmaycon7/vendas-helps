@@ -250,11 +250,8 @@ const getCNPJ = () => {
 
 	const cnpj = document
 		.getElementById("cnpj")
-		.value.replace(
-			/[\.\-\/\\^~\-\+\-\* ]/g,
-			""
-		);
-	console.log({ cnpj: cnpj });
+		.value.replace(/[\D]/g, "");
+	// console.log({ cnpj: cnpj });
 	axios.get(
 		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
 		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
@@ -376,14 +373,11 @@ const getCep = (cep) => {
 				"cep"
 			)
 			.value.replace(
-				/[\.\-\/\\^~\-\+\-\* ]/g,
+				/[\D]/g,
 				""
 			);
 	} else {
-		cep = cep.replace(
-			/[\.\-\/\\^~\-\+\-\* ]/g,
-			""
-		);
+		cep = cep.replace(/[\D]/g, "");
 	}
 	navigator.clipboard.writeText(cep);
 	axios.get("https://viacep.com.br/ws/" + cep + "/json/")
@@ -599,8 +593,13 @@ if (priceInput) {
 const cleanInput = document.getElementById("cleanInput");
 
 const clean = () => {
+	// const cleanTextContent = cleanInput.value.replace(
+	// 			/[\.\-\/\\^~\-\+\-\* \(\)]/g,
+	// 	""
+	// );
+
 	const cleanTextContent = cleanInput.value.replace(
-		/[\.\-\/\\^~\-\+\-\* ]/g,
+		/[\D]/g,
 		""
 	);
 	navigator.clipboard.writeText(cleanTextContent);
