@@ -33,15 +33,20 @@ Bateria -22996 - R$ 316,00
 
 
 # *PRODUTOS INDISPONIVEIS*
-- BGS-BOIA CARBURADOR....699724
-- 796914 - chicote
-- 203036
-- 203254
-- 21713
-- 67899
-- 204537
-- 204536
-- 19534
+- 798988
+- 794844
+- 798825
+- 699228
+- 798960
+- 
+  
+
+  Vou precisar.:
+
+* Carburador:  **R$ 748,60**
+* Filtro de ar: **R$ 28,28**
+* Tampa do Filtro  de ar: **R$ 61,31**
+* Base do filtro de ar: **R$ 114,41**
 
 =
 =SE(OU(H6<120;I6<120);"Inativo";"Ativo")
