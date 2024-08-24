@@ -23,20 +23,92 @@ Bateria -22996 - R$ 316,00
 # FRETE rodonaves obs
 
 // FRETE R$ 55,00  REF. TABELA INTERBRASIL //
-// FRETE 3,0% NF. R$ 120,00  REF. TABELA INTERBRASIL //
+// FRETE 1,5% NF. R$ 120,00  REF. TABELA INTERBRASIL //
 
 
 // FRETE 1,75% NF. MINIMO R$ 63,15  REF. TABELA INTERBRASIL //
 
 
-// FRETE COTADO VIA SITE, PROTOCOLO.- 272581469	  ( R$ 97,76 ) //
+// FRETE COTADO VIA SITE, PROTOCOLO.- 275613483	  ( R$ 97,76 ) //
 
+
+*RÇ-TRANSMISSAO CPL...28 X 9D. S430 "SAVANA"*
+- *R$ 48,90* - unidade
+- *R$ 46,50* - 30 unidades
+- *R$ 43,90* - 60 unidades
+- *R$ 40,90* - 120 unidades
+- *R$ 36,90* - 220 unidades
 
 # *PRODUTOS INDISPONIVEIS*
-- 499612-ENGRENAGEM-01
-- 197428-CHICOTE-01
+- MCH-CILINDRO (CPL) 45,2MM...58CC 
+- CILINDRO ST...170 37MM. C/PISTAO 
+- VIRABREQUIM ST...170 "ROSSEL"
+- MCH-SILENCIOSO...45/52/58CC "ARGON"
+- RÇ-POLIA ARRASTADORA PARTIDA 43CC...S430 "ARGON"
+- ARG4T-AGULHA ADMISSAO + GRAMPO...4,0/5,5/6,5/7,0 HP (MOD. NOVO)
+- ARG4T-MANGUEIRA RESPIRO... 4,0/5,5/6,5/7,0 HP 
 - 
   
+
+
+1. AMORTECEDOR HUSQ. E. PLUS TRASEIRO SANFONADO...61/268 :
+- **R$ 8,20** - unidade
+- **R$ 8,10** - 100 unidades
+- **R$ 8,00** - 200 unidades
+- **R$ 7,80** - >= 400 unidades
+2. AMORTECEDOR HUSQ. E. PLUS GRANDE R. GROSSA...61/268: 
+- **R$ 9,40** -  unidade
+- **R$ 9,20** -  100 unidades
+- **R$ 9,00** -  200 unidades
+- **R$ 8,80** -  >= 400 unidades
+3. AMORTECEDOR HUSQ. 61/268/272 PEQUENO LISO "EXTRA PLUS"
+- **R$ 8,00** -  unidade
+- **R$ 7,80** -  150 unidades
+- **R$ 7,60** -  >= 300 unidades
+
+Hq 61 sanfonado (pequeno ):
+
+Hq 61 sanfonado ( grande)
+St 038 chapinha 
+St 038 grande
+St 038 médio
+
+- Arrastador 43cc metal - **INDISPONIVEL**
+- Arrastador redondo para aramada - **????**
+- Chave de vela e fenda - 
+- Filtro de ar ms hq 268/272/394 feltro - 
+- Filtro de ar fs85 completo - **Elemento**
+- Filtro de ar st 170 adicional - 
+- Filtro de ar 142/ 143 adicional  - 
+- Kit gatilho 43cc botão  - 
+- Kit gatilho 430/260 antiga  - 
+- Kit gatilho 105/ 4x1/550  - 
+- Partida 43cc roçadeira  - 
+- Partida motor estácionario 5.0hp e 11.0 hp - 
+- Partida soprador kwb 63 - - **INDISPONIVEL**
+- Partida Farmeck  - 
+- Polia da partida de nylon fs85  - 
+- Polia da partida de nylon com mola kw26  - 
+- Polia da partida fs220  - 
+- Prisioneiro st 034 - 
+- Prisioneiro st 170 - 
+- Prisioneiro st 381 - 
+- Sem fim c/ mola st 170 - 
+- Sem fim ms importada  - 
+- Virabrequim hq 61 - 
+
+
+
+
+
+
+
+*Corrente - Motosserra Importada*
+- 12" 23 dentes, paso 3/8°
+- 14" 26 dentes, paso 3/8°
+- 16" 30 dentes, paso 3/8°
+- 18" 30 dentes, paso 3/8°
+- 18" 36 dentes, paso .325
 
   Vou precisar.:
 
