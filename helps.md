@@ -22,14 +22,146 @@ Bateria -22996 - R$ 316,00
 
 # FRETE rodonaves obs
 
+
+
+
+
+
+
 // FRETE R$ 55,00  REF. TABELA INTERBRASIL //
+
+
+
+
+00924845000769
+
+
+
+Descricao	CodOriginal	Un
+INVERSOR FRECON HIBRIDO ONDA PURA OFF GRID 3200W 220VAC /24VDC 80A MPPT	- 24417	UN
+
+
+
+
+
+
+
+
+
+
+
+regex
+
+^(\d{1,4}\,?\d{0,2}|\d{1,4}\.?\d{0,2})$
+
+=CONCAT("E ae. Blz? Passando para informar seu total de picoles esse mês. ";TEXTO(SOMA(C42:W42);"0,00.00"))
+
+=HIPERLINK(CONCAT("https://wa.me/";CONCAT(C2;CONCAT(CONCAT("?text=";"E ae. Blz? Passando para informar seu total de picoles esse mês. ");CONCAT(CONCAT(" R$ "; TEXTO(C42;"00.00"));". Chave-Pix: 6199373-3246"))));"Cobrar")
+
+=IFS(C40=FALSO;HIPERLINK(CONCAT("https://wa.me/";CONCAT(C2;CONCAT(CONCAT("?text=";"E ae. Blz? Passando para informar seu total de picoles esse mês. ");CONCAT(CONCAT(" R$ "; TEXTO(C42;"00.00"));". Chave-Pix: 6199373-3246"))));"Cobrar");C40=VERDADEIRO;'')
+
+=IFS(C40=FALSO; HIPERLINK(CONCAT("https://wa.me/";CONCAT(C2;CONCAT(CONCAT("?text=";"E ae. Blz? Passando para informar seu total de picoles esse mês. ");CONCAT(CONCAT(" R$ "; TEXTO(C42;"00.00"));". Chave-Pix: 6199373-3246"))));"Cobrar") ;C40=VERDADEIRO;"")
+
+
+=IFS(D40=FALSO;SOMA(D4:D36);D40=VERDADEIRO;0)
+
+\d{1}?\,?\d{1}|\d{1}\.?\d{1}
+\d{1}\,?\d{1}|\d{1}\.?\d{1}
+
+
+
+
+
+
+^(\(?\d{2}\)?\ ?\d{4}\-?\d{4}|\(?\d{2}\)?\d{4}\-?\d{4})$
+
+01pç - INVERSOR, SOLAR, OFF GRID, MULTIPLUS, 3000VA, 24V/230V, SENOIDAL PURA+CARREGADOR. 
+VICTRON, PMP243020001
+
+MultiPlus Multifunctional PMP243020001 MultiPlus 24/3000/70-16 Victron Energy (vega-int.com)
+
+06pçs - CONTROLADOR, CARGA, BATERIA, SOLAR BLUESOLAR, MPPT, 100V, 50A, 12/24V,MC4 SMART ENERGY. 
+VICTRON, SCC020050200
+
+
+
+
+
+
+
+
+
+
+ RUA GABRIELA DA COSTA, 50A  BAIRRO: CONJUNTO HAB. FRANCELINO PEREIRA (PINHEIRINHO)  CEP: 37.133-796  ALFENAS-MG
+
+\\ FRETE R$ 75,00 CONF. TABELA PRE-NEGOCIADA 3% DO VALOR DA NF //
+
+// ENDEREÇO ENTREGA:  RUA GABRIELA DA COSTA, 50A  BAIRRO: CONJUNTO HAB. FRANCELINO PEREIRA (PINHEIRINHO)  CEP: 37.133-796  ALFENAS-MG //
+// CONTATO: DAYANE (35) 99805-3538 /  35 91017-1004 //
+// FRETE R$ 200,50 REF. TABELA INTERBRASIL //
+
+
+
 // FRETE 1,5% NF. R$ 120,00  REF. TABELA INTERBRASIL //
 
 
 // FRETE 1,75% NF. MINIMO R$ 63,15  REF. TABELA INTERBRASIL //
 
 
-// FRETE COTADO VIA SITE, PROTOCOLO.- 275613483	  ( R$ 97,76 ) //
+// FRETE COTADO VIA SITE, PROTOCOLO.- 276066121	  ( R$ 222,70 ) //
+
+
+
+
+Grupo Preço	Quantidade	Preço Venda c/ IPI
+- unidade	  01  R$ 15,50
+- Promoção	20	R$ 14,50
+- Promoção	50	R$ 14,00
+- Promoção	100	R$ 12,50
+- Promoção	200	R$ 11,90
+- Promoção	300	R$ 11,36
+
+
+
+
+
+
+RÇ-TUBO PROTEÇÃO ROÇAD. SHIND. C-230 24X1450MM. "ROSSEL"
+- **R$ 59,00** unidade
+- **R$ 57,00** 10 unidades
+- **R$ 54,00** 30 unidades
+- **R$ 49,90** 50 unidade
+RÇ-TUBO PROTEÇAO ROÇAD. 26X1500MM. C/ BUCHA DE 8MM "NAC"
+- **R$ 74,00** unidade
+- **R$ 72,00** 30 unidades
+RÇ-TUBO PROTEÇAO ROÇAD. 28X1500MM S430 
+- **R$ 75,00** unidade
+- **R$ 72,00** 30 unidades
+RÇ-TUBO PROTEÇAO ROÇAD. 28X1550MM ST...FS-160/220/280 "NAC."
+- **R$ 75,00** unidade
+- **R$ 72,00** 30 unidades
+RÇ-TUBO PROTEÇÃO ROÇAD. 25X1500MM. TU-26 "ROSSEL"
+- **R$ 59,00** unidade
+- **R$ 57,00** 50 unidades
+- **R$ 55,00** 100 unidades
+
+
+
+*Roçadeiras*
+- stihl 220
+- stihl 85
+*motosserras*
+- stihl 170
+- stihl 250
+- stihl 360
+- stihl 380
+
+
+Retentor da 382 - R$ 4,40
+Junta carburador 382 - R$ 13,90
+Rolamento 382 - R$ 16,30 | R$ 21,10  NSK
+Junta carcaça 382 + Junta cilindro - R$ 5,90
+
 
 
 *RÇ-TRANSMISSAO CPL...28 X 9D. S430 "SAVANA"*
@@ -40,15 +172,20 @@ Bateria -22996 - R$ 316,00
 - *R$ 36,90* - 220 unidades
 
 # *PRODUTOS INDISPONIVEIS*
-- MCH-CILINDRO (CPL) 45,2MM...58CC 
-- CILINDRO ST...170 37MM. C/PISTAO 
-- VIRABREQUIM ST...170 "ROSSEL"
-- MCH-SILENCIOSO...45/52/58CC "ARGON"
-- RÇ-POLIA ARRASTADORA PARTIDA 43CC...S430 "ARGON"
-- ARG4T-AGULHA ADMISSAO + GRAMPO...4,0/5,5/6,5/7,0 HP (MOD. NOVO)
-- ARG4T-MANGUEIRA RESPIRO... 4,0/5,5/6,5/7,0 HP 
+- MB4T-BOCAL SAIDA M/B...2" PB-855-2" (PS02014013)
 - 
-  
+
+
+
+- LANTERNA TATICA RM4C RANGE MASTER "4GREER"	22446	Disponível
+- LANTERNA TATICA RM4 RANGE MASTER "4GREER"	22445	Disponível
+- LANTERNA TATICA LWS3 2000 LUMEN "4GREER"	22447	Disponível
+- LANTERNA TATICA HIP A7X "TIABLO"	22429	Disponível
+- LANTERNA TATICA HIP "4GREER"	22440	Disponível
+- LANTERNA TATICA HIC "4GREER"	22439	Disponível
+- LANTERNA TATICA HI A9X "TIABLO"	22427	Disponível
+- LANTERNA TATICA HI "4GREER"	22438	Disponível
+
 
 
 1. AMORTECEDOR HUSQ. E. PLUS TRASEIRO SANFONADO...61/268 :
@@ -56,12 +193,12 @@ Bateria -22996 - R$ 316,00
 - **R$ 8,10** - 100 unidades
 - **R$ 8,00** - 200 unidades
 - **R$ 7,80** - >= 400 unidades
-2. AMORTECEDOR HUSQ. E. PLUS GRANDE R. GROSSA...61/268: 
+1. AMORTECEDOR HUSQ. E. PLUS GRANDE R. GROSSA...61/268: 
 - **R$ 9,40** -  unidade
 - **R$ 9,20** -  100 unidades
 - **R$ 9,00** -  200 unidades
 - **R$ 8,80** -  >= 400 unidades
-3. AMORTECEDOR HUSQ. 61/268/272 PEQUENO LISO "EXTRA PLUS"
+1. AMORTECEDOR HUSQ. 61/268/272 PEQUENO LISO "EXTRA PLUS"
 - **R$ 8,00** -  unidade
 - **R$ 7,80** -  150 unidades
 - **R$ 7,60** -  >= 300 unidades
@@ -151,17 +288,17 @@ St 038 médio
 28. 
 
 
-
+[text](outlook:%5C%5Cml%40interbrasil.com.br)
 
 
 COTAÇÃO - FRETE 
 
-- CIDADE: Alta Floresta - MT
-- VALOR DA MERCADORIA: R$ 2.300,00
-- VOLUMES: 01
-- PESO: 44 Kg
+- CIDADE: Primavera do Leste MT
+- VALOR DA MERCADORIA: R$ 3.300,00
+- VOLUMES: 02
+- PESO: 66 Kg
 - DIMENSÕES: 180x120x5 cm
-- CEP: 78580000
+- CEP: 78850.000
 
 
 
