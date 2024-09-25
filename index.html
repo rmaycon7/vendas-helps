@@ -137,7 +137,12 @@
     </div> -->
 
 	<!-- <div id="app">{{ message }}</div> -->
-
+				<div class="input-group mb-3" onclick="navigator.clipboard.writeText(document.getElementById('email').value)"></div>
+				<input id="email" type="text" class="form-control" placeholder="email" aria-label="email"
+					aria-describedby="basic-addon2" value="ml@interbrasil.com.br" disabled />
+				<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" text="34028316501404" id="email-span"
+					onclick="navigator.clipboard.writeText(document.getElementById('email').value)">E-mail</span>
+				</div>
 				<div class="card">
 					<div class="card-body" id="obscard" placeholder="OBS" contenteditable="false"
 						onfocus="document.execCommand('selectAll',false,null)">

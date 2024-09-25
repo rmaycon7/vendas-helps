@@ -16,19 +16,40 @@ Bateria -22996 - R$ 316,00
 
 272295407
 
+
+
+# pedidos mercaod livre 
+
+// ENVIAR NF:  XML PARA 61 99373-3246 //
+// ENVIAR CARTA DE ISENÇÃO JUNTO A NF //
+// FRETE R$ 75,00  REF. TABELA INTERBRASIL //
+
+
 # garaffa termica
 
 // ENVIAR GARRAFA TERMICA CARLTON //
 
 # FRETE rodonaves obs
 
+**INDISPONIVEIS**
+- 16874
+- 3449
+- 679
+- 19712
+- 16717
+- 24857
+- 19315
+- 19110
+- 26131
+- 
 
 
 
 
-
-
+// CONTATO NOEL (31) 7144-5141 //
 // FRETE R$ 55,00  REF. TABELA INTERBRASIL //
+
+
 
 
 
