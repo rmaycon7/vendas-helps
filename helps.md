@@ -37,6 +37,8 @@ Bateria -22996 - R$ 316,00
 
 
 
+// ENDEREÇO DE ENTREGA:  AVENIDA VERISSIMO MENDONÇA, N° 928, BEIRA RIO, CATAGUASES - MG CEP: 36772022 / CAMILA 21 96996-1405 / (32) 3421-1531 //
+
 //  CONTATO: MAURICELIO (31) 98264-6088 / (31) 98437-1316 //
 //  FRETE R$ 145,00 CONF. TABELA PRE-NEGOCIADA 3% DO VALOR DA NF //
 
@@ -82,19 +84,18 @@ Bateria -22996 - R$ 316,00
 
 
 // CONTATO: CARLOS 31 8699-2105 //
-// FRETE R$ 75,00  REF. TABELA INTERBRASIL //
-
+5555555555555555555555555555555555555555555
 
 
 
 
 Motosserra Kawashima. 5218 3HP 49,2 cc
-
+55555555555555555555
 01 kit cilindro completo - R$ 68,00 / 25093
 01 cachimbo de vela - R$ 5,20 c/mola
 01 corrente 3/8 - R$ 65,00
 01 sabre 18" ponta rolante - R$ 56,000
-
+5555555555555555555555555
 
 
 Boa tarde, aqui é o Maycon.
@@ -103,7 +104,7 @@ Conforme folder acima, iniciamos neste mês outubro a campanha  pré temporada j
 Estamos com ofertas imperdiveis em mais de 200 itens. Não perca essa oportunidade.
 
 
-
+AVENIDA DESEMBARGADOR TITO PRATES 521 CASA REFERENCIA: DESEMBARGADOR TITO PRATES
 
 
 // A2500 - SERIAL: 
