@@ -253,7 +253,7 @@ const getCNPJ = () => {
 		.value.replace(/[\D]/g, "");
 	// console.log({ cnpj: cnpj });
 	axios.get(
-		`https://vendas-interbrasil-api.onrender.com/v1/${cnpj}`,
+		`https://api.cnpjs.dev/v1/${cnpj}`,
 		// `http://127.0.0.1:4000/v1/cnpj/${cnpj}`,
 		{
 			headers: {

@@ -19,6 +19,20 @@ Bateria -22996 - R$ 316,00
 // CLIENTE RETIRARA A MERCADORIA NA GARAGEM DA SERTANEJA EM BELO HORIZONTE - MG LIGAR PARA FABIA ASSIM QUE CHEGAR 31 9104-1448  //
 // FRETE R$ 75,00  REF. TABELA INTERBRASIL //
 
+# *NÃAO CADASTRADO*
+* 9.386-077
+* 5.731-609
+* 6.365-471
+* 9.311-055
+* 5.756-067
+
+# *INDISPONIVEIS*
+* KAR-ORING 142X1,78 HD 585 9.376-053.0
+
+
+
+
+Rodovia Admar Gonzaga 1347, Itacorubi, Empresa Referencia
 
 ##
 
@@ -72,7 +86,12 @@ Bateria -22996 - R$ 316,00
 
 
 
-
+* RÇ-TUBO PROTEÇAO ROÇAD. 28X1550MM ST...FS-160/220/280 (BUCHA GUIA PROTEÇAO) "ROSSEL" - *R$ 67,00* chega ate *R$ 55,00*
+* RÇ-TUBO PROTEÇÃO ROÇAD. SHIND. C-230 24X1450MM. "ROSSEL" - *R$ 62,00* chega ate *R$ 51,00*
+* RÇ-TUBO PROTEÇÃO ROÇAD. 25X1500MM. TU-26 "ROSSEL" - *R$ 65,00* chega ate *R$ 55,00*
+* RÇ-TUBO PROTEÇAO ROÇAD. 25,4X1500MM. ST. FS 85/80 C/ BUCHA DE 6MM "SAVANA" - *R$ 75,00* chega ate *R$ 64,00*
+* RÇ-TUBO PROTEÇAO ROÇAD. 28X1550MM ST...FS-160/220/280 (BUCHA GUIA PROTEÇAO) "ROSSEL" - *R$ 65,00* chega ate *R$ 55,00*
+* 
 
 
 
@@ -94,8 +113,7 @@ Motosserra Kawashima. 5218 3HP 49,2 cc
 01 kit cilindro completo - R$ 68,00 / 25093
 01 cachimbo de vela - R$ 5,20 c/mola
 01 corrente 3/8 - R$ 65,00
-01 sabre 18" ponta rolante - R$ 56,000
-5555555555555555555555555
+
 
 
 Boa tarde, aqui é o Maycon.
@@ -428,11 +446,11 @@ COTAÇÃO - FRETE
 1. BGS-MANGUEIRA VACUO....593641/596163/593998/797408
 
 
-*Tabela de Lima - Corrente*
-- 4,0mm (3/8" 1,1 - 1,3)
-- 4,8mm (3/8" 1,3) (325" 1,3 - 1,5)
-- 5,2mm (3/8" 1,5 - 1,6)
-- 5,5mm (3/8" 1,5 - 1,6)
+  *Tabela de Lima - Corrente*
+  - 4,0mm (3/8" 1,1 - 1,3)
+  - 4,8mm (3/8" 1,3) (325" 1,3 - 1,5)
+  - 5,2mm (3/8" 1,5 - 1,6)
+  - 5,5mm (3/8" 1,5 - 1,6)
 
 
 
