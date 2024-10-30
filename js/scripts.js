@@ -525,7 +525,7 @@ try {
 	});
 } catch (error) {}
 const upper = () => {
-	upperInput.value = upperInput.value.toUpperCase();
+	upperInput.value = upperInput.value.toUpperCase().replace(/(^[\s]+|[\s]+$)/g, '');
 	navigator.clipboard.writeText(upperInput.value);
 };
 
