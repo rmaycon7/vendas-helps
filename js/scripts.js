@@ -502,6 +502,7 @@ const getTextUpper = () => {
 			"textupper"
 		);
 	let textuppered = textUpperInput.value.toUpperCase();
+	textuppered = textuppered.replace(/(^[\s]+|[\s]+$)/g, '')
 	textInput.value = textuppered;
 	navigator.clipboard.writeText(textuppered);
 	// SDSDASD
