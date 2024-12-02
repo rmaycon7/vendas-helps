@@ -502,6 +502,7 @@ const getTextUpper = () => {
 			"textupper"
 		);
 	let textuppered = textUpperInput.value.toUpperCase();
+	textuppered = textuppered.replace(/(^[\s]+|[\s]+$)/g, '')
 	textInput.value = textuppered;
 	navigator.clipboard.writeText(textuppered);
 	// SDSDASD
@@ -524,7 +525,7 @@ try {
 	});
 } catch (error) {}
 const upper = () => {
-	upperInput.value = upperInput.value.toUpperCase();
+	upperInput.value = upperInput.value.toUpperCase().replace(/(^[\s]+|[\s]+$)/g, '');
 	navigator.clipboard.writeText(upperInput.value);
 };
 
