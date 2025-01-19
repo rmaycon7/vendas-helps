@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.19.2",
+    "fuse.js": "^7.0.0",
+    "got": "^9.6.0",
+    "http-proxy-middleware": "^3.0.0",
+    "http-server": "^14.1.1",
+    "httpie": "^1.1.2",
+    "node-fetch": "^3.3.2"
+  }
+}

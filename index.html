@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
+		<link rel="manifest" href="./img/site.webmanifest" />
+		<link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+		<meta name="generator" content="Hugo 0.84.0" />
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous" />
+			<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+		<title>Facilities</title>
+
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+			}
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+
+	<body class="text-center">
+		<!-- <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+          </a>
+        </div>
+      </nav> -->
+
+
+	<header></header>
+	<!-- <iframe src="header.html"></iframe> -->
+
+		<!-- <h1>Ins</h1> -->
+		<!-- <div class="input-group">
+		<span class="input-group-text">With textarea</span>
+		<textarea class="form-control" aria-label="With textarea"></textarea>
+	</div> -->
+
+		<main class="form-signin">
+			<div>
+				<img class="mb-4" src="./img/Logo%20Interbrasil.svg" alt="" width="272" height="257" />
+				<!-- <label class="w-100 btn btn-lg btn-primary" >Upper Case</label> -->
+				<!-- <h1 class="h3 mb-3 fw-normal">Insira o Texto</h1> -->
+				<!-- <h1 class="h3 mb-3 fw-normal">Insira o Texto</h1> -->
+				<!-- contato -->
+				<!-- Interbrasil / Maycon -->
+				
+
+
+			
+
+
+				<div class="input-group mb-3" onmouseover="textCNPJFocus()">
+					<input id="cnpj" type="text" class="form-control" placeholder="CNPJ" aria-label="CNPJ"
+						aria-describedby="basic-addon2" value="" maxlength="14" mask="00.000.000/0000-00"
+						pattern="00.000.000/0000-00" />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" maxLength="14" mask="99.999.999/9999-99"
+						onclick="getCNPJ()">Get CNPJ
+					</span>
+				</div>
+
+
+				<!-- <div class="input-group mb-3 fw-normal h3">
+                <span class="input-group-text" id="basic-addon1">Texto Transformado</span>
+                <input id="textuppered" type="text" class="form-control" placeholder="" aria-label="Username"
+                    aria-describedby="basic-addon1" disabled>
+			</div> -->
+
+				
+				<div class="input-group  mb-3" onmouseover="textUpperFocus()" onmousemove="textUpperFocus()">
+					<input id="textupper" type="text" class="form-control" aria-label="Nome/Razão Social"
+						placeholder="Nome/Razão Social" />
+					<span class="input-group-text btn btn-lg btn-warning" onclick="clearTextUpper()">Clear</span>
+					<!-- <label for="textupper">Nome / Razão Social</label> -->
+					<span class="input-group-text btn btn-lg btn-primary" onclick="getTextUpper()">Get Razão</span>
+
+				</div>
+				<div class="input-group mb-3" onmouseover="textCepFocus()">
+					<input id="cep" type="text" class="form-control" placeholder="CEP" aria-label="CEP" aria-describedby="basic-addon2"
+						value="" />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" text="34028316501404" onclick="getCep()">
+						Get Situação</span>
+				</div>
+				
+				<div id="mainList">
+				</div>
+				<div class="input-group mb-3" onmouseover="upperFocus()">
+					<input id="upper" type="text" class="form-control" placeholder="UPPER" aria-label="UPPER"
+						aria-describedby="basic-addon2" value="" mask="00.000.000/0000-00" />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" maxLength="14" mask="99.999.999/9999-99"
+						onclick="upper()">Upper
+					</span>
+												</div>
+				<div class="input-group mb-3" onclick="navigator.clipboard.writeText(document.getElementById('email').value)">
+				
+				
+					<input id="email" type="text" class="form-control" placeholder="email" aria-label="email"
+						aria-describedby="basic-addon2" value="ml@interbrasil.com.br" disabled />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" text="34028316501404" id="email-span"
+						onclick="navigator.clipboard.writeText(document.getElementById('email').value)">E-mail</span>
+				</div>
+				<!-- <div class="form-floating">
+      <input id="obsCadastro" type="text" class="form-control" id="floatingInput" placeholder="text-upper">
+      <label for="floatingInput">OBS:</label>
+    </div> -->
+
+	<!-- <div id="app">{{ message }}</div> -->
+	<div class="card">
+		<div class="card-body" id="obscard" placeholder="OBS" contenteditable="false"
+			onfocus="document.execCommand('selectAll',false,null)">
+			OBS
+		</div>
+	</div>
+
+				<!--     <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div> -->
+				<button class="w-100 btn btn-lg btn-primary" onclick="setObsToClipBoard()" type="">
+					Get
+					Obs
+				</button>
+
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+						aria-describedby="basic-addon2" value="34028316501404" disabled />
+					<span class="input-group-text btn btn-lg btn-success" id="basic-addon2" text="34028316501404" id="cnpjCorreios"
+						onclick="navigator.clipboard.writeText(34028316501404)">CNPJ
+						Correios</span>
+				</div>
+				<div class="input-group mb-3" onclick="navigator.clipboard.writeText(document.getElementById('contato').value)">
+					<input id="contato" type="text" class="form-control" placeholder="Contato" aria-label="Contato"
+						aria-describedby="basic-addon2" value="Interbrasil / Maycon" />
+					<span class="input-group-text btn btn-lg btn-primary" id="basic-addon2" text="34028316501404" id="contato-span"
+						onclick="navigator.clipboard.writeText(document.getElementById('contato').value)">Contato</span>
+				</div>
+
+				<!-- <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div> -->
+				<!-- <div class="alert alert-primary" role="alert">
+  	A simple primary alert—check it out!
+	</div> -->
+				<p class="mt-5 mb-3 text-muted">
+					&copy;
+					2024
+				</p>
+			</div>
+				
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script></script>
+
+		<script></script>
+		<script type="text/javascript"></script>
+
+		<!-- <script>
+
+        const url = 'https://consulta-cpf-ou-cnpj.p.rapidapi.com/api.agilconsulta.com.br/api/homologacao/infomais/cpf/05635319670';
+        const options = {
+            method: 'POST',
+            headers: {
+                'x-rapidapi-key': 'd01ac00bc2msh798146e0a383bfap14e633jsnb6a40a4c72b7',
+                'x-rapidapi-host': 'consulta-cpf-ou-cnpj.p.rapidapi.com',
+                'Content-Type': 'application/json'
+            },
+            body: {}
+        };
+
+        try {
+            const response = fetch(url, options);
+            const result = response.text();
+            console.log(result);
+        } catch (error) {
+            console.error(error);
+        }
+
+
+
+
+    </script> -->
+		<!-- Optional JavaScript; choose one of the two! -->
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+		<script src="./js/scripts.js"></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+<script>
+	function onStartedDownload(id) {
+		console.log(`Started downloading: ${id}`);
+	}
+
+	function onFailed(error) {
+		console.log(`Download failed: ${error}`);
+	}
+
+	let downloadUrl = "https://example.org/image.png";
+
+	let downloading = browser.downloads.download({
+		url: downloadUrl,
+		filename: "my-image-again.png",
+		conflictAction: "uniquify",
+	});
+
+	downloading.then(onStartedDownload, onFailed);
+
+</script>
+	</body>
+
+</html>
