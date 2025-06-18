@@ -611,6 +611,7 @@ const cleanFocus = () => {
 	// console.log("aqui");
 	try {
 		cleanInput.focus();
+		cleanInput.select();
 		// console.log({ cleanInput });
 	} catch (error) {}
 };
