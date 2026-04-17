@@ -140,6 +140,69 @@
 
 
 		<script></script>
+		<!-- ADICIONE ESTE SCRIPT em remove-special-caracteres.html
+antes de </body> -->
+
+<script>
+    const briggsInput = document.getElementById("briggsInput");
+
+    const briggsFocus = () => {
+        try {
+            briggsInput.focus();
+            briggsInput.select();
+        } catch (error) { }
+    };
+
+    const clearBriggs = () => {
+        briggsInput.value = "";
+        briggsFocus();
+    };
+
+    const getBriggsCode = () => {
+        let codigo = briggsInput.value || "";
+
+        // remove espaços
+        codigo = codigo.trim();
+
+        // remove tudo que não for letra/número
+        codigo = codigo.replace(/[^a-zA-Z0-9]/g, "");
+
+        // maiúsculo
+        codigo = codigo.toUpperCase();
+
+        return codigo;
+    };
+
+    const openBriggsIPL = () => {
+        const codigo = getBriggsCode();
+
+        if (!codigo) {
+            briggsFocus();
+            return;
+        }
+
+        const url = `https://www.thepowerportal.com/ipls/ipl.htm?md=${codigo}~_IPLURL_LO.pdf`;
+
+        navigator.clipboard.writeText(url);
+
+        window.open(url, "_blank");
+    };
+
+    // ENTER abre
+    briggsInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            openBriggsIPL();
+        }
+    });
+
+    // ao digitar já limpa caracteres ruins
+    briggsInput.addEventListener("input", function () {
+        briggsInput.value = briggsInput.value
+            .toUpperCase()
+            .replace(/[^A-Z0-9\- ]/g, "");
+    });
+</script>
 <script>
 	let clear_input = document.getElementById("cleanInput");
 
