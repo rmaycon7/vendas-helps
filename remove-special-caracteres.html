@@ -87,6 +87,22 @@
 							mask="99.999.999/9999-99" onclick="clean()">Clean
 						</span>
 					</div>
+					<!-- ADICIONE ESTE BLOCO em remove-special-caracteres.html
+				coloque acima ou abaixo do campo Clean -->
+				
+				<div class="input-group mb-3 fixed" onmouseover="briggsFocus()">
+				    <input id="briggsInput" type="text" class="form-control"
+				        placeholder="Modelo Briggs Ex: 31R977-0029-G1"
+				        aria-label="briggs" />
+				
+				    <span class="input-group-text btn btn-lg btn-warning"
+				        onclick="clearBriggs()">Clear
+				    </span>
+				
+				    <span class="input-group-text btn btn-lg btn-success"
+				        onclick="openBriggsIPL()">IPL
+				    </span>
+				</div>
 
 
 
